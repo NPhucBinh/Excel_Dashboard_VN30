@@ -19,7 +19,6 @@ from .report_vnd import report_f_vnd, info_cp
 from .data.ds_company import *
 import time
 
-from .chrome_driver.chromedriver_setup import *
 
 
 

@@ -16,17 +16,8 @@ from .stockvn import (get_foreign_historical_vnd,get_price_historical_vnd,key_id
     getCPI_vietstock,solieu_sanxuat_congnghiep,solieu_banle_vietstock,solieu_XNK_vietstock,solieu_FDI_vietstock,tygia_vietstock,solieu_tindung_vietstock,laisuat_vietstock,
     solieu_danso_vietstock,solieu_GDP_vietstock,get_data_result_order,get_info_cp,momentum_ck)
 
-from webdriver_manager.chrome import ChromeDriverManager
 from selenium import webdriver
 
-def setup_webdriver():
-    try:
-        driver = webdriver.Chrome()
-    except Exception as e:
-        print(f"Không tìm thấy ChromeDriver. Đang tự động tải và cài đặt...")
-        ChromeDriverManager().install()
-        driver = webdriver.Chrome()
-    return driver
 
 remove_file_old()
 check_var()
