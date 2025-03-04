@@ -16,7 +16,6 @@ from .user_agent import random_user
 
 import datetime as dt
 from .report_vnd import report_f_vnd, info_cp
-from .data.ds_company import *
 import time
 
 
@@ -67,20 +66,10 @@ def key_id(document_id):
 
 
 
-def list_company():
-    data=list_company_24h()
-    return data
 
 
-def update_company():
-    package_path = os.path.dirname(__file__)
-    data_path = os.path.join(package_path, 'data')
-    path_nganh = os.path.join(data_path, 'dsnganh.xlsx')
-    save_list = os.path.join(data_path, 'ds_ngành_đã_lọc.xlsx')
-    load_list_company()
-    update_list_company()
-    data=pd.read_excel(save_list)
-    return data
+
+
 
 
 

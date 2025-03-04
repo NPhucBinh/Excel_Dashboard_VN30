@@ -16,6 +16,5 @@ from .stockvn import (get_foreign_historical_vnd,get_price_historical_vnd,key_id
     getCPI_vietstock,solieu_sanxuat_congnghiep,solieu_banle_vietstock,solieu_XNK_vietstock,solieu_FDI_vietstock,tygia_vietstock,solieu_tindung_vietstock,laisuat_vietstock,
     solieu_danso_vietstock,solieu_GDP_vietstock,get_data_result_order,get_info_cp,momentum_ck)
 
-from selenium import webdriver
 
 
