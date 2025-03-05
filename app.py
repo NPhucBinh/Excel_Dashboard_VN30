@@ -1,7 +1,9 @@
 import streamlit as st
 import pandas as pd
 import openpyxl
-from THONG_KE_VNINDEX_VN30 import process_excel  # Import function từ file function.py
+import THONG_KE_VNINDEX_VN30
+process_excel = THONG_KE_VNINDEX_VN30.process_excel
+
 
 st.title("📊 Xem & Xử Lý File Excel Trực Tiếp")
 
