@@ -7,12 +7,11 @@ import time
 from user_agent import random_user
 import stockvn as rpv
 
-import gdown
 from datetime import datetime
 from datetime import timedelta
 from bs4 import BeautifulSoup
 import json
-import html5lib
+
 
 global head
 head={"User-Agent":random_user()}
