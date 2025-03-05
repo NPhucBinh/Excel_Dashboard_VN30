@@ -11,7 +11,7 @@ import pandas as pd
 import requests
 import json
 from datetime import datetime, timedelta
-from .user_agent import random_user
+from user_agent import random_user
 
 
 users=random_user()

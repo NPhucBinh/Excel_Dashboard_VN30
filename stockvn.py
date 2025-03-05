@@ -12,10 +12,10 @@ import requests
 import json
 import os
 from bs4 import BeautifulSoup
-from .user_agent import random_user
+from user_agent import random_user
 
 import datetime as dt
-from .report_vnd import report_f_vnd, info_cp
+from report_vnd import report_f_vnd, info_cp
 import time
 
 
