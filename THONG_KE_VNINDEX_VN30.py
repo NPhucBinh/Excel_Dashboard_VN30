@@ -6,8 +6,7 @@ import requests
 import time
 from user_agent import random_user
 import stockvn as rpv
-from selenium.webdriver.common.by import By
-from selenium import webdriver
+
 import gdown
 from datetime import datetime
 from datetime import timedelta
@@ -283,42 +282,6 @@ def giao_dich_tu_doanh(symbol,fromdate,todate):
     return data
 
 
-@xw.func()
-def list_company():
-    df=rpv.list_company()
-    return df
-
-@xw.func()
-def update_company():
-    data=rpv.update_company()
-    return data
-
-
-@xw.func()
-def lai_suat_cafef():
-    data=rpv.lai_suat_cafef()
-    return data
-
-
-
-@xw.func()
-def giao_dich_noi_bo(symbol,fromdate,todate):
-    fromdate = pd.to_datetime(fromdate)
-    fdate = fromdate.strftime('%d/%m/%Y')
-    todate = pd.to_datetime(todate)
-    tdate = todate.strftime('%d/%m/%Y')
-    data=rpv.get_insider_transaction_history_cafef(symbol.upper(),fdate,tdate)
-    return data
-
-@xw.func()
-def giao_dich_khoi_ngoai(symbol,fromdate,todate):
-    fromdate = pd.to_datetime(fromdate)
-    fdate = fromdate.strftime('%d/%m/%Y')
-    todate = pd.to_datetime(todate)
-    tdate = todate.strftime('%d/%m/%Y')
-    data=rpv.get_foreign_transaction_history_cafef(symbol.upper(),fdate,tdate)
-    return data
-
 
 @xw.func()
 def report_finance_vnd(symbol,types,year_f,timely):
@@ -327,11 +290,6 @@ def report_finance_vnd(symbol,types,year_f,timely):
     data=rpv.report_finance_vnd(symbol,types,year_f,timely)
     return data
 
-@xw.func()
-def report_finance_cf(symbol,report,year,timely):
-    symbol, report, year, timely = str(symbol), str(report), int(year), str(timely)
-    data=rpv.report_finance_cf(symbol,report,year,timely)
-    return data
 
 
 
@@ -402,15 +360,6 @@ def solieu_GDP_vietstock(fromyear,fromQ,toyear,toQ):
     data=rpv.solieu_GDP_vietstock(fromyear,fromQ,toyear,toQ)
     return data 
 
-
-@xw.func()
-def get_price_history_cafef(symbol,fromdate,todate):
-    fromdate = pd.to_datetime(fromdate)
-    fdate = fromdate.strftime('%d/%m/%Y')
-    todate = pd.to_datetime(todate)
-    tdate = todate.strftime('%d/%m/%Y')
-    data=rpv.get_price_history_cafef(symbol.upper(),fdate,tdate)
-    return data
 
 
 if __name__ == "__main__":
