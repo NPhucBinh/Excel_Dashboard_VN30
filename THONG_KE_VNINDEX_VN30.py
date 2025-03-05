@@ -5,7 +5,7 @@ from datetime import date
 import requests
 import time
 from user_agent import random_user
-from RStockvn import stockvn as rpv
+import stockvn as rpv
 from selenium.webdriver.common.by import By
 from selenium import webdriver
 import gdown
