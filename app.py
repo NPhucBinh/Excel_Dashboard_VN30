@@ -1,9 +1,7 @@
 import streamlit as st
 import pandas as pd
 import openpyxl
-import THONG_KE_VNINDEX_VN30
-process_excel = THONG_KE_VNINDEX_VN30.process_excel
-
+from THONG_KE_VNINDEX_VN30 import process_excel  # Chỉ import file Python, không phải .xlsm
 
 st.title("📊 Xem & Xử Lý File Excel Trực Tiếp")
 
@@ -12,7 +10,7 @@ uploaded_file = st.file_uploader("📂 Chọn file Excel (.xlsm, .xlsx)", type=[
 
 if uploaded_file:
     st.success("✅ File đã tải lên!")
-    
+
     # Đọc file và hiển thị dữ liệu
     df = pd.read_excel(uploaded_file, engine='openpyxl')
     st.write("### 🔍 Dữ liệu trong file:")

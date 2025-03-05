@@ -17,6 +17,11 @@ global head
 head={"User-Agent":random_user()}
 
 
+def process_excel(input_file):
+    # Xử lý file Excel và trả về đường dẫn file kết quả
+    output_path = "output.xlsx"
+    # Lưu dữ liệu vào output_path...
+    return output_path
 
 
 
